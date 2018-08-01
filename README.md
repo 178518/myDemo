@@ -1,3 +1,21 @@
+# 178518demo
+
+[![NPM version](https://img.shields.io/npm/v/178518demo.svg?style=flat)](https://www.npmjs.org/package/178518demo)
+build
+cover
+[![Total download](https://img.shields.io/npm/dt/178518demo.svg?style=flat)](https://www.npmjs.org/package/178518demo)
+[![license](https://img.shields.io/npm/l/178518demo.svg?style=flat)](https://www.npmjs.org/package/178518demo)
+
+
+## Install
+
+```shell
+npm i 178518demo
+```
+
+[![178518demo](https://nodei.co/npm/178518demo.png)](https://npmjs.org/package/178518demo)
+
+
 # React Compontent 开发规约
 
 组件通过内容分发实现值传递，尽量避免props传递。
