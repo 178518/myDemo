@@ -18,7 +18,7 @@ install:
   npm install --registry http://registry.npmjs.org
 # 运行脚本之前安装依赖，不明白为什么要全局安装
 before_script:
-  - npm install -g less autoprefixer postcss-cli babel-cli babel-core babel-preset-env babel-preset-react
+  - npm install -g less autoprefixer postcss-cli babel-cli babel-core babel-preset-env babel-preset-react babel-preset-es2015 babel-preset-stage-2
 # 运行的脚本，这个脚本必须你本地能跑通，且通过
 script:
   - npm run dist
