@@ -23,7 +23,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "enzyme-adapter-react-16": "^1.1.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
   },
@@ -37,6 +36,7 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.0",
     "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-import": "^2.13.0",
@@ -50,8 +50,6 @@
     "less-loader": "^4.1.0",
     "nightwatch": "^0.9.21",
     "postcss-cli": "^6.0.0",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
     "react-test-renderer": "^16.4.1",
     "selenium-standalone": "^6.15.1",
     "snazzy": "^7.1.1",
