@@ -1,4 +1,5 @@
-var sauce = require('./sauce.json'); // 引进 userName 和 key
+/* eslint-disable comma-dangle */
+var sauce = require('./sauce.json') // 引进 userName 和 key
 
 // 生成一个 SauceLabs 浏览器配置信息，可以指定运行的系统和浏览器版本
 function createCustomLauncher (browser, platform, version) {
@@ -6,8 +7,8 @@ function createCustomLauncher (browser, platform, version) {
     base: 'SauceLabs',
     browserName: browser,
     platform: platform,
-    version: version
-  };
+    version: version,
+  }
 }
 
 // 定义所有需要在云端测试的平台和浏览器
@@ -33,20 +34,20 @@ var customLaunchers = {
   // IE 浏览器
   sl_ie_9: createCustomLauncher('internet explorer', 'Windows 7', '9'),
   sl_ie_10: createCustomLauncher('internet explorer', 'Windows 8', '10'),
-  sl_ie_11: createCustomLauncher('internet explorer', 'Windows 10', '11')
-};
+  sl_ie_11: createCustomLauncher('internet explorer', 'Windows 10', '11'),
+}
 
 // Karma 配置参数
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 module.exports = function (KarmaConfig) {
   // 将 SauceLabs 提供的 username 和 accesskey 放到环境变量中
   if (!process.env.SAUCE_USERNAME || !process.env.SAUCE_ACCESS_KEY) {
-    process.env.SAUCE_USERNAME = sauce.username;
-    process.env.SAUCE_ACCESS_KEY = sauce.accesskey;
+    process.env.SAUCE_USERNAME = sauce.username
+    process.env.SAUCE_ACCESS_KEY = sauce.accesskey
   }
 
   // 设置测试的超时时间
-  var maxExecuteTime = 5*60*1000;
+  var maxExecuteTime = 5 * 60 * 1000
   KarmaConfig.set({
     // 加载测试文件的根目录
     basePath: '',
@@ -54,7 +55,7 @@ module.exports = function (KarmaConfig) {
     frameworks: ['jasmine'],
     // 告诉 Karma 要将哪些 js 文件加载到浏览器运行测试
     files: [
-      '../src/**/*.js',
+      'example/src/*.js',
     ],
     // SauceLabs 的配置，这里只需要配置几个重要的字段即可，完整的字段可以参考：
     // https://wiki.saucelabs.com/display/DOCS/Test+Configuration+Options
@@ -68,7 +69,7 @@ module.exports = function (KarmaConfig) {
       // 测试名称
       testName: 'Cross browsers test',
       // 测试的记录号，可以为任意字符，如果希望生成矩阵图，build 不能为空
-      build: 'build-' + Date.now()
+      build: 'build-' + Date.now(),
     },
     // 自定义运行测试的 SauceLabs 浏览器
     customLaunchers: customLaunchers,
@@ -77,6 +78,6 @@ module.exports = function (KarmaConfig) {
     reporters: ['progress', 'saucelabs'],
     // 最大超时时间
     captureTimeout: maxExecuteTime,
-    browserNoActivityTimeout: maxExecuteTime
-  });
+    browserNoActivityTimeout: maxExecuteTime,
+  })
 }
