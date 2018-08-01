@@ -8,7 +8,7 @@ cache:
   directories:
     - node_modules
 before_script:
-  - npm install -g less autoprefixer postcss-cli babel-cli
+  - npm install -g less autoprefixer postcss-cli babel-cli babel-core babel-preset-env babel-preset-react
 #指定只有检测到master分支有变动时才执行任务
 branchs:
   only:
