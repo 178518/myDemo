@@ -1,0 +1,56 @@
+{
+  "name": "myDemo",
+  "version": "",
+  "description": "",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist && mkdir dist",
+    "start": "webpack-dev-server --mode development --open",
+    "autoprefixer":"postcss -u autoprefixer -o ./src/assets/index.css ./src/assets/index.css",
+    "dist": "npm run autoprefixer && npm run clean && babel src -d dist --copy-files",
+    "prepublish": "npm run dist"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "standard \"src/**/*.{js, jsx}\" | snazzy"
+    }
+  },
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5",
+    "husky": "^0.15.0-rc.8",
+    "snazzy": "^7.1.1",
+    "standard": "^11.0.1"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie < 11",
+    "last 2 versions",
+    "> 1%",
+    "iOS 7",
+    "last 3 iOS versions"
+  ]
+}
