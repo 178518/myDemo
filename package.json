@@ -49,6 +49,7 @@
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "nightwatch": "^0.9.21",
+    "postcss": "^7.0.2",
     "postcss-cli": "^6.0.0",
     "react-test-renderer": "^16.4.1",
     "selenium-standalone": "^6.15.1",
