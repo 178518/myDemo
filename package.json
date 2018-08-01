@@ -13,7 +13,7 @@
     "start": "webpack-dev-server --mode development --open",
     "autoprefixer": "postcss -u autoprefixer -o ./src/assets/index.css ./src/assets/index.css",
     "dist": "npm run autoprefixer && npm run clean && babel src -d dist --copy-files",
-    "prepublish": "npm run dist"
+    "prepublish": "npm run clean"
   },
   "husky": {
     "hooks": {
