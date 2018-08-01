@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist && mkdir dist",
     "start": "webpack-dev-server --mode development --open",
-    "autoprefixer":"postcss -u autoprefixer -o ./src/assets/index.css ./src/assets/index.css",
+    "autoprefixer": "postcss -u autoprefixer -o ./src/assets/index.css ./src/assets/index.css",
     "dist": "npm run autoprefixer && npm run clean && babel src -d dist --copy-files",
     "prepublish": "npm run dist"
   },
@@ -43,7 +43,9 @@
     "webpack-dev-server": "^3.1.5",
     "husky": "^0.15.0-rc.8",
     "snazzy": "^7.1.1",
-    "standard": "^11.0.1"
+    "standard": "^11.0.1",
+    "autoprefixer": "^9.0.2",
+    "postcss-cli": "^6.0.0"
   },
   "browserslist": [
     "defaults",
