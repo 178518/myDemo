@@ -1,10 +1,10 @@
 # 178518demo
 
 [![NPM version](https://img.shields.io/npm/v/178518demo.svg?style=flat)](https://www.npmjs.org/package/178518demo)
-build
-cover
-[![Total download](https://img.shields.io/npm/dt/178518demo.svg?style=flat)](https://www.npmjs.org/package/178518demo)
-[![license](https://img.shields.io/npm/l/178518demo.svg?style=flat)](https://www.npmjs.org/package/178518demo)
+[![node version](https://img.shields.io/badge/node.js-%3E=_8.11.3-green.svg?style=flat)](http://nodejs.org/download/)
+[![Build](https://img.shields.io/travis/178518/myDemo.svg)](https://travis-ci.org/178518/myDemo)
+[![NPM Count](https://img.shields.io/npm/dt/178518demo.svg?style=flat)](https://www.npmjs.org/package/178518demo)
+[![License](https://img.shields.io/npm/l/178518demo.svg?style=flat)](https://www.npmjs.org/package/178518demo)
 
 
 ## Install
@@ -24,6 +24,8 @@ npm i 178518demo
 
 ```
 npm install -g less autoprefixer postcss-cli
+
+npm install karma karma-jasmine -g
 ```
 
 # WebStorm配置自动编译
