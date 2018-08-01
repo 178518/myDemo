@@ -4,8 +4,6 @@ node_js:
 install:
   npm install -g npm@latest
   npm --version
-  npm install
+  npm install --registry http://registry.npmjs.org
 script:
   - npm run dist
-notifications:
-  email: false
