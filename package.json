@@ -7,7 +7,8 @@
     "dist"
   ],
   "scripts": {
-    "test": "jest",
+    "test": "jest --colors",
+    "coverage": "jest --colors --coverage",
     "clean": "rm -rf dist && mkdir dist",
     "start": "webpack-dev-server --mode development --open",
     "autoprefixer": "postcss -u autoprefixer -o ./src/assets/index.css ./src/assets/index.css",
@@ -22,6 +23,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "enzyme-adapter-react-16": "^1.1.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
   },
@@ -50,6 +52,7 @@
     "postcss-cli": "^6.0.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-test-renderer": "^16.4.1",
     "selenium-standalone": "^6.15.1",
     "snazzy": "^7.1.1",
     "standard": "^11.0.1",
@@ -59,7 +62,19 @@
     "webpack-dev-server": "^3.1.5"
   },
   "jest": {
-    "collectCoverage": true
+    "verbose": true,
+    "testURL": "http://localhost/",
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      ".*\\.(css|less|scss)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
   },
   "browserslist": [
     "defaults",

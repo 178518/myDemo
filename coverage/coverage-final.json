@@ -1,0 +1,2 @@
+{"/Users/yun.zhao/workspace/demo/src/index.js": {"path":"/Users/yun.zhao/workspace/demo/src/index.js","statementMap":{"0":{"start":{"line":6,"column":4},"end":{"line":6,"column":41}}},"fnMap":{"0":{"name":"(anonymous_0)","decl":{"start":{"line":5,"column":2},"end":{"line":5,"column":3}},"loc":{"start":{"line":5,"column":12},"end":{"line":7,"column":3}},"line":5}},"branchMap":{},"s":{"0":1},"f":{"0":1},"b":{},"_coverageSchema":"332fd63041d2c1bcb487cc26dd0d5f7d97098a6c","hash":"dc0108cf4f3dceadd514f904b1e568956a649fdb"}
+}
