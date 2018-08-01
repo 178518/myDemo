@@ -11,8 +11,8 @@
     "coverage": "jest --colors --coverage",
     "clean": "rm -rf dist && mkdir dist",
     "start": "webpack-dev-server --mode development --open",
-    "autoprefixer": "postcss -u autoprefixer -o ./src/assets/index.css ./src/assets/index.css",
-    "dist": "npm run autoprefixer && npm run clean && babel src -d dist --copy-files",
+    "postcss": "postcss -u autoprefixer -o ./src/assets/index.css ./src/assets/index.css",
+    "dist": "npm run postcss && npm run clean && babel src -d dist --copy-files",
     "prepublish": "npm run dist"
   },
   "husky": {
@@ -24,7 +24,9 @@
   "license": "MIT",
   "dependencies": {
     "react": "^16.4.0",
-    "react-dom": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "devDependencies": {
     "autoprefixer": "^9.0.2",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
