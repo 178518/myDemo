@@ -7,7 +7,7 @@
     "dist"
   ],
   "scripts": {
-    "test": "jest --colors",
+    "jest": "jest --colors",
     "coverage": "jest --colors --coverage",
     "clean": "rm -rf dist && mkdir dist",
     "start": "webpack-dev-server --mode development --open",
