@@ -12,13 +12,15 @@ branchs:
   only:
   - master
 # 安装依赖
-install:
-  npm install -g npm@latest
-  npm --version
-  npm install --registry http://registry.npmjs.org
+#install:
+#  npm install -g npm@latest
+#  npm --version
+#  npm install --registry http://registry.npmjs.org
 # 运行脚本之前要全局安装依赖，不明白为什么要全局安装
-before_script:
-  - npm install -g autoprefixer postcss-cli babel-cli babel-core babel-preset-env babel-preset-es2015 babel-preset-react
+# before_script:
+  # - npm install -g autoprefixer postcss-cli babel-cli babel-preset-env babel-preset-react
 # 运行的脚本，这个脚本必须你本地能跑通，且通过
-script:
+# script:
+  # - npm run dist
+after_success:
   - npm run dist
