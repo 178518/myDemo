@@ -12,7 +12,7 @@
     "clean": "rm -rf dist && mkdir dist",
     "start": "webpack-dev-server --mode development --open",
     "postcss": "postcss -u autoprefixer -o ./src/assets/index.css ./src/assets/index.css",
-    "dist": "npm run postcss && npm run clean",
+    "dist": "npm run postcss && npm run clean && babel src -d dist --copy-files",
     "prepublish": "npm run dist"
   },
   "husky": {
