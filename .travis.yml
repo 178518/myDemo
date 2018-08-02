@@ -26,8 +26,8 @@ branchs:
   # - npm run dist
 after_success:
   - npm run dist
-  - npm run codecov
+  codecov
 # 设置集成环境的全局变量
 #env:
-  # global:
-  #  - NODE_ENV=travis
+#  global:
+#    - CODECOV_TOKEN=5c81dc3e-179a-4e44-8e28-be84dd9ae916
