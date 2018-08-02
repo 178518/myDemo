@@ -1,3 +1,5 @@
+# sudo 最好设置成false，这样travis会对你的项目根据提交的集成时间顺延进行集成，而且官方不鼓励sudo
+sudo: false
 # 语言
 language: node_js
 # 要测试的nodejs版本
@@ -24,3 +26,8 @@ branchs:
   # - npm run dist
 after_success:
   - npm run dist
+  - npm run codecov
+# 设置集成环境的全局变量
+env:
+  global:
+    - NODE_ENV=travis
