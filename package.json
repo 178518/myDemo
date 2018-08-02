@@ -14,7 +14,8 @@
     "start": "webpack-dev-server --mode development --open",
     "postcss": "postcss -u autoprefixer -o ./src/assets/index.css ./src/assets/index.css",
     "dist": "npm run coverage && npm run postcss && npm run clean && babel src -d dist --copy-files",
-    "prepublish": "npm run dist"
+    "prepublish": "npm run dist",
+    "report":"codecov --token=5c81dc3e-179a-4e44-8e28-be84dd9ae916"
   },
   "husky": {
     "hooks": {

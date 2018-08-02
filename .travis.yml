@@ -26,7 +26,7 @@ branchs:
   # - npm run dist
 after_success:
   - npm run dist
-  codecov
+  - npm run report
 # 设置集成环境的全局变量
 #env:
 #  global:
